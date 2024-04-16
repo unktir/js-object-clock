@@ -1,0 +1,37 @@
+html, body {
+    color: #bfbcbc;
+
+    font-family: Consolas, monospace;
+}
+
+body {
+    background-color: #111418;
+}
+
+.keyword {
+    color: #329f9f;
+}
+
+.local-variable {
+    color: #c22727;
+}
+
+.operator {
+    color: #ea9f46;
+}
+
+.bracket {
+    color: #ea9f46;
+}
+
+.object-key {
+    color: inherit;
+}
+
+.number {
+    color: #099376;
+}
+
+.string {
+    color: #099376;
+}

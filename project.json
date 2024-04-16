@@ -1,0 +1,336 @@
+{
+	"contentrating" : "Everyone",
+	"description" : "\"js object - clock\" is a web-based  wallpaper with a customization available. The JetBrains IDE dark theme was taken as the basis (maybe add some more).\r\n\r\n[b]List of settings:[/b]\r\n[list]\r\n[*]Select the 12 o'clock format,\r\n[*]Show the leading zero (convert a numeric value to a string value),\r\n[*]Change visibility of any element (hour, minute, second, period (PM/AM), day, weekday, month, year, timezone, UNIX),\r\n[*]Select font size, font family and theme,\r\n[*]Change to [b]const[/b] declaration,\r\n[*]Change clock position.\r\n[/list]\r\n\r\n[b]List of themes:[/b]\r\n[list]\r\n[*]Default (customized JetBrains Dark)\r\n[*]JetBrains Dark,\r\n[*]JetBrains Light,\r\n[*]Dark Modern,\r\n[*]Light Modern,\r\n[*]One Dark Pro,\r\n[*]Dracula Official,\r\n[*]GitHub Theme,\r\n[*][url=steamcommunity.com/sharedfiles/filedetails/?id=2980088441]CodeTime[/url].\r\n[/list]\r\n\r\n[b]List of font family:[/b]\r\n[list]\r\n[*]Consolas,\r\n[*]Courier New,\r\n[*]JetBrains Mono,\r\n[*]Hack NFM.\r\n[/list]\r\n\r\nI will be glad to see your wishes, criticism or praise)\r\nIf you have any ideas on how to improve this project, then please open a discussion so that I can discuss it with you\r\n\r\nThis project was inspired by Isaias19's project called [url=steamcommunity.com/sharedfiles/filedetails/?id=2980088441]CodeTime[/url]\r\nAlso recommend watching OOOOMGOSH's project called [url=steamcommunity.com/sharedfiles/filedetails/?id=3007669757]Python Dictionary Clock[/url]",
+	"file" : "index.html",
+	"general" : 
+	{
+		"properties" : 
+		{
+			"clock_settings" : 
+			{
+				"index" : 0,
+				"order" : 100,
+				"text" : "<h3><b>Clock settings</b></h3>",
+				"type" : "text"
+			},
+			"customization_1" : 
+			{
+				"index" : 5,
+				"order" : 105,
+				"text" : "<h4><b>Customization</b></h4>",
+				"type" : "text"
+			},
+			"customization_2" : 
+			{
+				"index" : 22,
+				"order" : 122,
+				"text" : "<h4><b>Customization</b></h4>",
+				"type" : "text"
+			},
+			"schemecolor" : 
+			{
+				"order" : 0,
+				"text" : "ui_browse_properties_scheme_color",
+				"type" : "color",
+				"value" : "0 0 0"
+			},
+			"theme_settings" : 
+			{
+				"index" : 20,
+				"order" : 120,
+				"text" : "<h3><b>Theme settings</b></h3>",
+				"type" : "text"
+			},
+			"ui_customize_position_enable" : 
+			{
+				"index" : 6,
+				"order" : 106,
+				"text" : "<b><u>Position</u></b>",
+				"type" : "bool",
+				"value" : false
+			},
+			"ui_customize_theme_enable" : 
+			{
+				"index" : 23,
+				"order" : 123,
+				"text" : "<b><u>Enable</u></b>",
+				"type" : "bool",
+				"value" : false
+			},
+			"ui_customize_visibility_enable" : 
+			{
+				"index" : 9,
+				"order" : 109,
+				"text" : "<b><u>Visibility</u></b>",
+				"type" : "bool",
+				"value" : false
+			},
+			"ui_font_family" : 
+			{
+				"condition" : "ui_customize_theme_enable.value === true",
+				"index" : 24,
+				"options" : 
+				[
+					{
+						"label" : "Default",
+						"value" : "inherit"
+					},
+					{
+						"label" : "Consolas",
+						"value" : "Consolas, monospace"
+					},
+					{
+						"label" : "Courier New",
+						"value" : "Courier New, monospace"
+					},
+					{
+						"label" : "JetBrains Mono",
+						"value" : "JetBrains Mono, monospace"
+					},
+					{
+						"label" : "Hack NFM",
+						"value" : "Hack NFM, monospace"
+					}
+				],
+				"order" : 124,
+				"text" : "Font family",
+				"type" : "combo",
+				"value" : "inherit"
+			},
+			"ui_font_size" : 
+			{
+				"fraction" : false,
+				"index" : 1,
+				"max" : 64,
+				"min" : 16,
+				"order" : 101,
+				"text" : "Font size",
+				"type" : "slider",
+				"value" : 48
+			},
+			"ui_position_x" : 
+			{
+				"condition" : "ui_customize_position_enable.value === true",
+				"index" : 7,
+				"options" : 
+				[
+					{
+						"label" : "Left",
+						"value" : "flex-start"
+					},
+					{
+						"label" : "Center",
+						"value" : "center"
+					},
+					{
+						"label" : "Right",
+						"value" : "flex-end"
+					}
+				],
+				"order" : 107,
+				"text" : "Position X",
+				"type" : "combo",
+				"value" : "center"
+			},
+			"ui_position_y" : 
+			{
+				"condition" : "ui_customize_position_enable.value === true",
+				"index" : 8,
+				"options" : 
+				[
+					{
+						"label" : "Top",
+						"value" : "flex-start"
+					},
+					{
+						"label" : "Center",
+						"value" : "Center"
+					},
+					{
+						"label" : "Bottom",
+						"value" : "flex-end"
+					}
+				],
+				"order" : 108,
+				"text" : "Position Y",
+				"type" : "combo",
+				"value" : "Center"
+			},
+			"ui_show_day" : 
+			{
+				"condition" : "ui_customize_visibility_enable.value === true",
+				"index" : 14,
+				"order" : 114,
+				"text" : "Show day",
+				"type" : "bool",
+				"value" : true
+			},
+			"ui_show_hour" : 
+			{
+				"condition" : "ui_customize_visibility_enable.value === true",
+				"index" : 10,
+				"order" : 110,
+				"text" : "Show hour",
+				"type" : "bool",
+				"value" : true
+			},
+			"ui_show_leading_zero" : 
+			{
+				"condition" : "",
+				"index" : 3,
+				"order" : 103,
+				"text" : "Show leading zero",
+				"type" : "bool",
+				"value" : false
+			},
+			"ui_show_minute" : 
+			{
+				"condition" : "ui_customize_visibility_enable.value === true",
+				"index" : 11,
+				"order" : 111,
+				"text" : "Show minute",
+				"type" : "bool",
+				"value" : true
+			},
+			"ui_show_month" : 
+			{
+				"condition" : "ui_customize_visibility_enable.value === true",
+				"index" : 16,
+				"order" : 116,
+				"text" : "Show month",
+				"type" : "bool",
+				"value" : true
+			},
+			"ui_show_period" : 
+			{
+				"condition" : "ui_customize_visibility_enable.value === true",
+				"index" : 13,
+				"order" : 113,
+				"text" : "Show period (PM/AM)",
+				"type" : "bool",
+				"value" : true
+			},
+			"ui_show_second" : 
+			{
+				"condition" : "ui_customize_visibility_enable.value === true",
+				"index" : 12,
+				"order" : 112,
+				"text" : "Show seconds",
+				"type" : "bool",
+				"value" : true
+			},
+			"ui_show_timezone" : 
+			{
+				"condition" : "ui_customize_visibility_enable.value === true",
+				"index" : 18,
+				"order" : 118,
+				"text" : "Show timezone",
+				"type" : "bool",
+				"value" : false
+			},
+			"ui_show_unix" : 
+			{
+				"condition" : "ui_customize_visibility_enable.value === true",
+				"index" : 19,
+				"order" : 119,
+				"text" : "Show UNIX",
+				"type" : "bool",
+				"value" : false
+			},
+			"ui_show_weekday" : 
+			{
+				"condition" : "ui_customize_visibility_enable.value === true",
+				"index" : 15,
+				"order" : 115,
+				"text" : "Show weekday",
+				"type" : "bool",
+				"value" : false
+			},
+			"ui_show_year" : 
+			{
+				"condition" : "ui_customize_visibility_enable.value === true",
+				"index" : 17,
+				"order" : 117,
+				"text" : "Show year",
+				"type" : "bool",
+				"value" : true
+			},
+			"ui_theme" : 
+			{
+				"index" : 21,
+				"options" : 
+				[
+					{
+						"label" : "Default",
+						"value" : "main"
+					},
+					{
+						"label" : "JetBrains Dark",
+						"value" : "jb_dark"
+					},
+					{
+						"label" : "Dark Moder",
+						"value" : "dark_moder"
+					},
+					{
+						"label" : "One Dark Pro",
+						"value" : "one_dark_pro"
+					},
+					{
+						"label" : "Dracula Official",
+						"value" : "dracula_official"
+					},
+					{
+						"label" : "GitHub Theme",
+						"value" : "github_theme"
+					},
+					{
+						"label" : "Rose Pine",
+						"value" : "rose_pine"
+					},
+					{
+						"label" : "CodeTime",
+						"value" : "code_time"
+					},
+					{
+						"label" : "JetBrains Light",
+						"value" : "jb_light"
+					},
+					{
+						"label" : "Light Moder",
+						"value" : "light_moder"
+					}
+				],
+				"order" : 121,
+				"text" : "Theme",
+				"type" : "combo",
+				"value" : "main"
+			},
+			"ui_use_12h_format" : 
+			{
+				"condition" : "",
+				"index" : 2,
+				"order" : 102,
+				"text" : "Use 12h format",
+				"type" : "bool",
+				"value" : false
+			},
+			"ui_use_const" : 
+			{
+				"index" : 4,
+				"order" : 104,
+				"text" : "Use <b>const</b> declaration",
+				"type" : "bool",
+				"value" : false
+			}
+		}
+	},
+	"preview" : "preview.jpg",
+	"tags" : [ "Technology" ],
+	"title" : "js object - clock",
+	"type" : "Web",
+	"version" : 6,
+	"visibility" : "public",
+	"workshopid" : "2986163106",
+	"workshopurl" : "steam://url/CommunityFilePage/2986163106"
+}
