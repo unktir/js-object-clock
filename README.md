@@ -1,19 +1,9 @@
-<!--
-<picture>
-  <source srcset="preview.jpg">
-  <img src="preview.jpg" alt="Preview" width="320" height="320">
-</picture>
-<a href="https://github.com/unktir/js-object-clock/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
-<a href="https://github.com/unktir/js-object-clock/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
--->
-
 # js object - clock [![MIT License][license-shield]][license-url] [![Steam Subscriptions][Steam-shield]][Steam-url]
 
 <picture>
   <source srcset="preview.jpg">
   <img src="preview.jpg" alt="Preview" width="320" height="320">
 </picture>
-<!-- ![screenshot](preview.jpg) -->
 
 "js object - clock" is a web-based wallpaper with a customization available for Wallpaper Engine. The JetBrains IDE dark theme was taken as the basis (maybe add some more).
 I will be glad to see your wishes, criticism or praise)
@@ -73,14 +63,6 @@ Distributed under the [MIT License](LICENSE.txt). See `LICENSE.txt` for more inf
 - [Wallpaper Engine Web Guide](https://docs.wallpaperengine.io/en/web/overview.html)
 
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/unktir/js-object-clock.svg?style=flat-square
-[contributors-url]: https://github.com/unktir/js-object-clock/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/unktir/js-object-clock.svg?style=flat-square
-[forks-url]: https://github.com/unktir/js-object-clock/network/members
-[stars-shield]: https://img.shields.io/github/stars/unktir/js-object-clock.svg?style=flat-square
-[stars-url]: https://github.com/unktir/js-object-clock/stargazers
-[issues-shield]: https://img.shields.io/github/issues/unktir/js-object-clock.svg?style=flat-square
-[issues-url]: https://github.com/unktir/js-object-clock/issues
 [license-shield]: https://img.shields.io/github/license/unktir/js-object-clock.svg?style=flat-square
 [license-url]: https://github.com/unktir/js-object-clock/blob/master/LICENSE.txt
 [Steam-shield]: https://img.shields.io/steam/subscriptions/2986163106?style=flat-square&logo=steam
