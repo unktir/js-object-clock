@@ -22,11 +22,20 @@ Don't forget to give the project a star!
 
 ## Table of Contents
 
+- [Features](#Features)
 - [Technologies](#Technologies)
 - [Contributing](#Contributing)
 - [License](#License)
 - [Contact](#Contact)
 - [Sources](#Sources)
+
+## Features
+- Select the 12 o'clock format.
+- Show the leading zero (convert a numeric value to a string value).
+- Change visibility of any element (hour, minute, second, period (PM/AM), day, weekday, month, year, timezone, UNIX).
+- Select font size, 4 font families and 10 themes.
+- Change to const declaration.
+- Change clock position.
 
 ## Technologies
 
@@ -37,7 +46,7 @@ Don't forget to give the project a star!
 
 ## Contributing
 
-If you have a suggestion that would make this project better, please fork the repo and create a [pull request](https://github.com/unktir/js-object-clock/compare/). You can also simply open an [issue](https://github.com/unktir/js-object-clock/issues/new) with the tag "enhancement". If you encounter any bug, then open an [issue](https://github.com/unktir/js-object-clock/issues/new) with the tag "bug".
+If you have a suggestion that would make this project better, please fork the repo and create a [pull request](https://github.com/unktir/js-object-clock/compare/). You can also simply open an [issue](https://github.com/unktir/js-object-clock/issues/new) with the tag "enhancement" or open a [discussion](https://github.com/unktir/js-object-clock/discussions/new/choose) so that I can discuss it with you. If you encounter any bug, open the [issue](https://github.com/unktir/js-object-clock/issues/new) with the tag "bug".
 
 To fix a bug or enhance an existing module, follow these steps:
 1. Fork the Repo
