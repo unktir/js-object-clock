@@ -5,6 +5,8 @@ function Clock() {
     let timeZoneSign = timeZoneOffsetInMinutes > 0 ? '-' : '+';
     let timeZoneOffsetHours = Math.abs(Math.floor(timeZoneOffsetInMinutes / 60));
 
+    let utcStyledString = `"${time.getUTCFullYear()}-${(time.getUTCMonth() + 1).toString().padStart(2, '0')}-${time.getUTCDate().toString().padStart(2, '0')}T${time.getUTCHours().toString().padStart(2, '0')}:${time.getUTCMinutes().toString().padStart(2, '0')}:${time.getUTCSeconds().toString().padStart(2, '0')}.000Z"`;
+
     this.hour = time.getHours();
     this.minute = time.getMinutes();
     this.second = time.getSeconds();
@@ -15,6 +17,7 @@ function Clock() {
     this.year = time.getFullYear();
     this.timezone = `"GMT${timeZoneSign}${timeZoneOffsetHours.toString().padStart(2, '0')}"`;
     this.unix = Math.floor(Date.now() / 1000);
+    this.utc = utcStyledString;
 }
 
 function Settings() {
@@ -69,6 +72,11 @@ function Settings() {
                 order: 9,
                 visibility: false,
                 type: 'number'
+            },
+            utc: {
+                order: 10,
+                visibility: false,
+                type: 'string'
             }
         },
     }
@@ -122,7 +130,8 @@ const themes = {
     dracula_official: "./styles/dracula-official.css",
     github_theme: "./styles/github-theme.css",
     code_time: "./styles/code-time.css",
-    rose_pine: "./styles/rose-pine.css"
+    rose_pine: "./styles/rose-pine.css",
+    synthwave_84: "./styles/synthwave-84.css",
 }
 
 const default_settings = new Settings()

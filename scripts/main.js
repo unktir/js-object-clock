@@ -64,6 +64,9 @@ window.wallpaperPropertyListener = {
         if (properties.ui_show_unix) {
             settings.clock.elements.unix.visibility = properties.ui_show_unix.value;
         }
+        if (properties.ui_show_utc) {
+            settings.clock.elements.utc.visibility = properties.ui_show_utc.value;
+        }
 
         if (properties.ui_theme) {
             settings.theme.name = properties.ui_theme.value;
