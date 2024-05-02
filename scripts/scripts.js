@@ -122,7 +122,8 @@ const themes = {
     dracula_official: "./styles/dracula-official.css",
     github_theme: "./styles/github-theme.css",
     code_time: "./styles/code-time.css",
-    rose_pine: "./styles/rose-pine.css"
+    rose_pine: "./styles/rose-pine.css",
+    catppuccin_mocha: "./styles/catppuccin-mocha.css"
 }
 
 const default_settings = new Settings()
@@ -244,11 +245,11 @@ function changePosition(settings) {
     document.body.style.alignItems = y
 }
 
-function changeFontSize({size}) {
+function changeFontSize({ size }) {
     document.body.style.fontSize = size + "px"
 }
 
-function changeFontFamily({family}) {
+function changeFontFamily({ family }) {
     document.body.style.fontFamily = family
 }
 
@@ -276,4 +277,4 @@ function updateClock(object, settings) {
     updateClockDOM(object, settings)
 }
 
-export {Clock, Settings, updateClock}
+export { Clock, Settings, updateClock }
