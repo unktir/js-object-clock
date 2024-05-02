@@ -245,11 +245,11 @@ function changePosition(settings) {
     document.body.style.alignItems = y
 }
 
-function changeFontSize({ size }) {
+function changeFontSize({size}) {
     document.body.style.fontSize = size + "px"
 }
 
-function changeFontFamily({ family }) {
+function changeFontFamily({family}) {
     document.body.style.fontFamily = family
 }
 
@@ -277,4 +277,4 @@ function updateClock(object, settings) {
     updateClockDOM(object, settings)
 }
 
-export { Clock, Settings, updateClock }
+export {Clock, Settings, updateClock}
