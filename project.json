@@ -6,27 +6,6 @@
 	{
 		"properties" : 
 		{
-			"clock_settings" : 
-			{
-				"index" : 0,
-				"order" : 100,
-				"text" : "<h3><b>Clock settings</b></h3>",
-				"type" : "text"
-			},
-			"customization_1" : 
-			{
-				"index" : 5,
-				"order" : 105,
-				"text" : "<h4><b>Customization</b></h4>",
-				"type" : "text"
-			},
-			"customization_2" : 
-			{
-				"index" : 23,
-				"order" : 123,
-				"text" : "<h4><b>Customization</b></h4>",
-				"type" : "text"
-			},
 			"schemecolor" : 
 			{
 				"order" : 0,
@@ -34,72 +13,12 @@
 				"type" : "color",
 				"value" : "0 0 0"
 			},
-			"theme_settings" : 
+			"clock_settings" : 
 			{
-				"index" : 21,
-				"order" : 121,
-				"text" : "<h3><b>Theme settings</b></h3>",
+				"index" : 0,
+				"order" : 100,
+				"text" : "<h3><b>Clock settings</b></h3>",
 				"type" : "text"
-			},
-			"ui_customize_position_enable" : 
-			{
-				"index" : 6,
-				"order" : 106,
-				"text" : "<b><u>Position</u></b>",
-				"type" : "bool",
-				"value" : false
-			},
-			"ui_customize_theme_enable" : 
-			{
-				"index" : 24,
-				"order" : 124,
-				"text" : "<b><u>Enable</u></b>",
-				"type" : "bool",
-				"value" : false
-			},
-			"ui_customize_visibility_enable" : 
-			{
-				"index" : 9,
-				"order" : 109,
-				"text" : "<b><u>Visibility</u></b>",
-				"type" : "bool",
-				"value" : false
-			},
-			"ui_font_family" : 
-			{
-				"condition" : "ui_customize_theme_enable.value === true",
-				"index" : 25,
-				"options" : 
-				[
-					{
-						"label" : "Default",
-						"value" : "inherit"
-					},
-					{
-						"label" : "Consolas",
-						"value" : "Consolas, monospace"
-					},
-					{
-						"label" : "Courier New",
-						"value" : "Courier New, monospace"
-					},
-					{
-						"label" : "JetBrains Mono",
-						"value" : "JetBrains Mono, monospace"
-					},
-					{
-						"label" : "Hack NFM",
-						"value" : "Hack NFM, monospace"
-					},
-					{
-						"label" : "Iosevka",
-						"value" : "Iosevka, monospace"
-					}
-				],
-				"order" : 125,
-				"text" : "Font family",
-				"type" : "combo",
-				"value" : "inherit"
 			},
 			"ui_font_size" : 
 			{
@@ -111,6 +30,47 @@
 				"text" : "Font size",
 				"type" : "slider",
 				"value" : 48
+			},
+			"ui_use_12h_format" : 
+			{
+				"condition" : "",
+				"index" : 2,
+				"order" : 102,
+				"text" : "Use 12h format",
+				"type" : "bool",
+				"value" : false
+			},
+			"ui_show_leading_zero" : 
+			{
+				"condition" : "",
+				"index" : 3,
+				"order" : 103,
+				"text" : "Show leading zero",
+				"type" : "bool",
+				"value" : false
+			},
+			"ui_use_const" : 
+			{
+				"index" : 4,
+				"order" : 104,
+				"text" : "Use <b>const</b> declaration",
+				"type" : "bool",
+				"value" : false
+			},
+			"customization_1" : 
+			{
+				"index" : 5,
+				"order" : 105,
+				"text" : "<h4><b>Customization</b></h4>",
+				"type" : "text"
+			},
+			"ui_customize_position_enable" : 
+			{
+				"index" : 6,
+				"order" : 106,
+				"text" : "<b><u>Position</u></b>",
+				"type" : "bool",
+				"value" : false
 			},
 			"ui_position_x" : 
 			{
@@ -160,14 +120,13 @@
 				"type" : "combo",
 				"value" : "Center"
 			},
-			"ui_show_day" : 
+			"ui_customize_visibility_enable" : 
 			{
-				"condition" : "ui_customize_visibility_enable.value === true",
-				"index" : 14,
-				"order" : 114,
-				"text" : "Show day",
+				"index" : 9,
+				"order" : 109,
+				"text" : "<b><u>Visibility</u></b>",
 				"type" : "bool",
-				"value" : true
+				"value" : false
 			},
 			"ui_show_hour" : 
 			{
@@ -178,15 +137,6 @@
 				"type" : "bool",
 				"value" : true
 			},
-			"ui_show_leading_zero" : 
-			{
-				"condition" : "",
-				"index" : 3,
-				"order" : 103,
-				"text" : "Show leading zero",
-				"type" : "bool",
-				"value" : false
-			},
 			"ui_show_minute" : 
 			{
 				"condition" : "ui_customize_visibility_enable.value === true",
@@ -196,12 +146,12 @@
 				"type" : "bool",
 				"value" : true
 			},
-			"ui_show_month" : 
+			"ui_show_second" : 
 			{
 				"condition" : "ui_customize_visibility_enable.value === true",
-				"index" : 16,
-				"order" : 116,
-				"text" : "Show month",
+				"index" : 12,
+				"order" : 112,
+				"text" : "Show seconds",
 				"type" : "bool",
 				"value" : true
 			},
@@ -214,12 +164,39 @@
 				"type" : "bool",
 				"value" : true
 			},
-			"ui_show_second" : 
+			"ui_show_day" : 
 			{
 				"condition" : "ui_customize_visibility_enable.value === true",
-				"index" : 12,
-				"order" : 112,
-				"text" : "Show seconds",
+				"index" : 14,
+				"order" : 114,
+				"text" : "Show day",
+				"type" : "bool",
+				"value" : true
+			},
+			"ui_show_weekday" : 
+			{
+				"condition" : "ui_customize_visibility_enable.value === true",
+				"index" : 15,
+				"order" : 115,
+				"text" : "Show weekday",
+				"type" : "bool",
+				"value" : false
+			},
+			"ui_show_month" : 
+			{
+				"condition" : "ui_customize_visibility_enable.value === true",
+				"index" : 16,
+				"order" : 116,
+				"text" : "Show month",
+				"type" : "bool",
+				"value" : true
+			},
+			"ui_show_year" : 
+			{
+				"condition" : "ui_customize_visibility_enable.value === true",
+				"index" : 17,
+				"order" : 117,
+				"text" : "Show year",
 				"type" : "bool",
 				"value" : true
 			},
@@ -250,23 +227,12 @@
 				"type" : "bool",
 				"value" : false
 			},
-			"ui_show_weekday" : 
+			"theme_settings" : 
 			{
-				"condition" : "ui_customize_visibility_enable.value === true",
-				"index" : 15,
-				"order" : 115,
-				"text" : "Show weekday",
-				"type" : "bool",
-				"value" : false
-			},
-			"ui_show_year" : 
-			{
-				"condition" : "ui_customize_visibility_enable.value === true",
-				"index" : 17,
-				"order" : 117,
-				"text" : "Show year",
-				"type" : "bool",
-				"value" : true
+				"index" : 21,
+				"order" : 121,
+				"text" : "<h3><b>Theme settings</b></h3>",
+				"type" : "text"
 			},
 			"ui_theme" : 
 			{
@@ -323,31 +289,63 @@
 				"type" : "combo",
 				"value" : "main"
 			},
-			"ui_use_12h_format" : 
+			"customization_2" : 
 			{
-				"condition" : "",
-				"index" : 2,
-				"order" : 102,
-				"text" : "Use 12h format",
+				"index" : 23,
+				"order" : 123,
+				"text" : "<h4><b>Customization</b></h4>",
+				"type" : "text"
+			},
+			"ui_customize_theme_enable" : 
+			{
+				"index" : 24,
+				"order" : 124,
+				"text" : "<b><u>Enable</u></b>",
 				"type" : "bool",
 				"value" : false
 			},
-			"ui_use_const" : 
+			"ui_font_family" : 
 			{
-				"index" : 4,
-				"order" : 104,
-				"text" : "Use <b>const</b> declaration",
-				"type" : "bool",
-				"value" : false
+				"condition" : "ui_customize_theme_enable.value === true",
+				"index" : 25,
+				"options" : 
+				[
+					{
+						"label" : "Default",
+						"value" : "inherit"
+					},
+					{
+						"label" : "Consolas",
+						"value" : "Consolas, monospace"
+					},
+					{
+						"label" : "Courier New",
+						"value" : "Courier New, monospace"
+					},
+					{
+						"label" : "JetBrains Mono",
+						"value" : "JetBrains Mono, monospace"
+					},
+					{
+						"label" : "Hack NFM",
+						"value" : "Hack NFM, monospace"
+					},
+					{
+						"label" : "Iosevka",
+						"value" : "Iosevka, monospace"
+					}
+				],
+				"order" : 125,
+				"text" : "Font family",
+				"type" : "combo",
+				"value" : "inherit"
 			}
 		}
 	},
 	"preview" : "preview.jpg",
-	"ratingsex" : "none",
-	"ratingviolence" : "none",
 	"tags" : [ "Technology" ],
 	"title" : "js object - clock",
-	"type" : "web",
+	"type" : "Web",
 	"version" : 6,
 	"visibility" : "public",
 	"workshopid" : "2986163106",
