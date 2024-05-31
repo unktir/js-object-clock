@@ -289,6 +289,10 @@
 						"value" : "rose_pine"
 					},
 					{
+						"label": "Catppuccin Mocha",
+						"value": "catppuccin_mocha"
+					},
+					{
 						"label" : "CodeTime",
 						"value" : "code_time"
 					},
@@ -299,10 +303,6 @@
 					{
 						"label" : "Light Moder",
 						"value" : "light_moder"
-					},
-					{
-						"label": "Catppuccin Mocha",
-						"value": "catppuccin_mocha"
 					}
 				],
 				"order" : 121,
