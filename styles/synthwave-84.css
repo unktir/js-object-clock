@@ -1,6 +1,6 @@
 html,
 body {
-  color: #b6b1b1;
+  color: #bbbbbb;
 
   font-family: Consolas, "Courier New", monospace;
 }
@@ -11,37 +11,28 @@ body {
 
 .keyword {
   color: #fede5d;
-  text-shadow: 0 0 2px #000;
 }
 
 .local-variable {
   color: #ff7edb;
-  text-shadow: 0 0 2px #000;
 }
 
 .operator {
-  color: #fede5d;
-  text-shadow: 0 0 2px #000;
+  color: #ffffffee;
 }
 
 .bracket {
-  color: #fede5d;
-  text-shadow: 0 0 2px #000;
+  color: inherit;
 }
 
 .object-key {
-  color: #2ae2ed;
-  text-shadow: 0 0 2px #000;
-  /* Can look good too but not the same as the theme */
-  /* color: #72f1b8; */
+  color: #2ee2fa;
 }
 
 .number {
   color: #2ae2ed;
-  text-shadow: 0 0 2px #000;
 }
 
 .string {
   color: #ff8b39;
-  text-shadow: 0 0 2px #000;
 }
