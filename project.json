@@ -299,6 +299,10 @@
 					{
 						"label" : "Light Moder",
 						"value" : "light_moder"
+					},
+					{
+						"label": "Catppuccin Mocha",
+						"value": "catppuccin_mocha"
 					}
 				],
 				"order" : 121,

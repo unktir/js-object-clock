@@ -122,7 +122,8 @@ const themes = {
     dracula_official: "./styles/dracula-official.css",
     github_theme: "./styles/github-theme.css",
     code_time: "./styles/code-time.css",
-    rose_pine: "./styles/rose-pine.css"
+    rose_pine: "./styles/rose-pine.css",
+    catppuccin_mocha: "./styles/catppuccin-mocha.css"
 }
 
 const default_settings = new Settings()
