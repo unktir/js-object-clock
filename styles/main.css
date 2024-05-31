@@ -28,6 +28,11 @@ samp {
     src: url("../fonts/HackNerdFontMono-Regular.woff2") format("woff2");
 }
 
+@font-face {
+    font-family: "Iosevka";
+    src: url("../fonts/Iosevka-Regular.woff2") format("woff2");
+}
+
 *,
 :before,
 :after {
