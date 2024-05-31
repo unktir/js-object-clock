@@ -23,7 +23,7 @@ Don't forget to give the project a star!
 - Select the 12 o'clock format.
 - Show the leading zero (convert a numeric value to a string value).
 - Change visibility of any element (hour, minute, second, period (PM/AM), day, weekday, month, year, timezone, UNIX).
-- Select font size, 4 font families and 10 themes.
+- Select font size, 4 font families and 11 themes.
 - Change to const declaration.
 - Change clock position.
 
