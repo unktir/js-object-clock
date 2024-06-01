@@ -5,7 +5,7 @@ function Clock() {
     let timeZoneSign = timeZoneOffsetInMinutes > 0 ? '-' : '+';
     let timeZoneOffsetHours = Math.abs(Math.floor(timeZoneOffsetInMinutes / 60));
 
-    let utcStyledString = `"${time.getUTCFullYear()}-${(time.getUTCMonth() + 1).toString().padStart(2, '0')}-${time.getUTCDate().toString().padStart(2, '0')}T${time.getUTCHours().toString().padStart(2, '0')}:${time.getUTCMinutes().toString().padStart(2, '0')}:${time.getUTCSeconds().toString().padStart(2, '0')}.000Z"`;
+    let utcStyledString = `${time.toISOString().split(".")[0]}.000Z`;
 
     this.hour = time.getHours();
     this.minute = time.getMinutes();
