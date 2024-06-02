@@ -129,7 +129,8 @@ const themes = {
     github_theme: "./styles/github-theme.css",
     code_time: "./styles/code-time.css",
     rose_pine: "./styles/rose-pine.css",
-    synthwave_84: "./styles/synthwave-84.css",
+    catppuccin_mocha: "./styles/catppuccin-mocha.css",
+    synthwave_84: "./styles/synthwave-84.css"
 }
 
 const default_settings = new Settings()
