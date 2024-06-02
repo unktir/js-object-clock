@@ -15,6 +15,7 @@ function Clock() {
     this.year = time.getFullYear();
     this.timezone = `"GMT${timeZoneSign}${timeZoneOffsetHours.toString().padStart(2, '0')}"`;
     this.unix = Math.floor(Date.now() / 1000);
+    this.utc = new Date(this.unix * 1000).toISOString();
 }
 
 function Settings() {
@@ -69,6 +70,11 @@ function Settings() {
                 order: 9,
                 visibility: false,
                 type: 'number'
+            },
+            utc: {
+                order: 10,
+                visibility: false,
+                type: 'string'
             }
         },
     }
@@ -123,7 +129,8 @@ const themes = {
     github_theme: "./styles/github-theme.css",
     code_time: "./styles/code-time.css",
     rose_pine: "./styles/rose-pine.css",
-    catppuccin_mocha: "./styles/catppuccin-mocha.css"
+    catppuccin_mocha: "./styles/catppuccin-mocha.css",
+    synthwave_84: "./styles/synthwave-84.css"
 }
 
 const default_settings = new Settings()
