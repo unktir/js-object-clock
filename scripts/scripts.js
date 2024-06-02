@@ -5,8 +5,6 @@ function Clock() {
     let timeZoneSign = timeZoneOffsetInMinutes > 0 ? '-' : '+';
     let timeZoneOffsetHours = Math.abs(Math.floor(timeZoneOffsetInMinutes / 60));
 
-    let utcStyledString = `${time.toISOString().split(".")[0]}.000Z`;
-
     this.hour = time.getHours();
     this.minute = time.getMinutes();
     this.second = time.getSeconds();
@@ -17,7 +15,7 @@ function Clock() {
     this.year = time.getFullYear();
     this.timezone = `"GMT${timeZoneSign}${timeZoneOffsetHours.toString().padStart(2, '0')}"`;
     this.unix = Math.floor(Date.now() / 1000);
-    this.utc = utcStyledString;
+    this.utc = new Date(this.unix * 1000).toISOString();
 }
 
 function Settings() {
