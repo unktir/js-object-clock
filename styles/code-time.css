@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
     color: #bfbcbc;
 
     font-family: Consolas, monospace;
@@ -28,10 +29,22 @@ body {
     color: inherit;
 }
 
+.colon {
+    color: inherit;
+}
+
 .number {
     color: #099376;
 }
 
 .string {
     color: #099376;
+}
+
+.comma {
+    color: inherit;
+}
+
+.semicolon {
+    color: inherit;
 }

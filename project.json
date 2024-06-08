@@ -248,8 +248,8 @@
 						"value" : "jb_dark"
 					},
 					{
-						"label" : "Dark Moder",
-						"value" : "dark_moder"
+						"label" : "Dark Modern",
+						"value" : "dark_modern"
 					},
 					{
 						"label" : "One Dark Pro",
@@ -284,8 +284,8 @@
 						"value" : "jb_light"
 					},
 					{
-						"label" : "Light Moder",
-						"value" : "light_moder"
+						"label" : "Light Modern",
+						"value" : "light_modern"
 					}
 				],
 				"order" : 122,

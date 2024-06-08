@@ -122,8 +122,8 @@ const themes = {
     main: "./styles/main.css",
     jb_dark: "./styles/jb-dark.css",
     jb_light: "./styles/jb-light.css",
-    dark_moder: "./styles/dark-modern.css",
-    light_moder: "./styles/light-modern.css",
+    dark_modern: "./styles/dark-modern.css",
+    light_modern: "./styles/light-modern.css",
     one_dark_pro: "./styles/one-dark-pro.css",
     dracula_official: "./styles/dracula-official.css",
     github_theme: "./styles/github-theme.css",
@@ -194,8 +194,8 @@ function getVisibleElementsOrderedList(elements) {
 function createClockElement(element_name, object, elements, comma_flag = true) {
     const element = document.createElement('p')
     element.id = element_name
-    element.classList.add('tab', 'on')
-    element.innerHTML = `<span class="object-key">${element_name}</span>: <span id="${element_name}_value" class="${elements[element_name].type}">${object[element_name].toString()}</span><span class="comma">,</span>`
+    element.classList.add('tab')
+    element.innerHTML = `<span class="object-key">${element_name}</span><span class="colon">:</span> <span id="${element_name}_value" class="${elements[element_name].type}">${object[element_name].toString()}</span><span class="comma">,</span>`
     if (!comma_flag) {
         element.getElementsByClassName('comma')[0].remove()
     }
@@ -233,7 +233,7 @@ function createClock(object, settings) {
     result.push(...clock_elements)
 
     const end = document.createElement('p')
-    end.innerHTML = `<span class="bracket">}</span>;`
+    end.innerHTML = `<span class="bracket">}</span><span class="semicolon">;</span>`
     result.push(end)
 
     return result

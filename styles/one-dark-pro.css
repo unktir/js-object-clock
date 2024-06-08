@@ -1,7 +1,8 @@
-html, body {
+html,
+body {
     color: #abb2bf;
 
-    font-family: "JetBrains Mono", monospace;
+    font-family: 'JetBrains Mono', monospace;
 }
 
 body {
@@ -28,10 +29,22 @@ body {
     color: #e06c75;
 }
 
+.colon {
+    color: inherit;
+}
+
 .number {
     color: #d19a66;
 }
 
 .string {
     color: #98c379;
+}
+
+.comma {
+    color: inherit;
+}
+
+.semicolon {
+    color: inherit;
 }

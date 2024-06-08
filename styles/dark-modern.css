@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
     color: #cccccc;
 
     font-family: Consolas, 'Courier New', monospace;
@@ -17,7 +18,7 @@ body {
 }
 
 .operator {
-    color: #d4d4d4
+    color: #d4d4d4;
 }
 
 .bracket {
@@ -28,10 +29,22 @@ body {
     color: #9cdcfe;
 }
 
+.colon {
+    color: #9cdcfe;
+}
+
 .number {
     color: #b5cea8;
 }
 
 .string {
     color: #ce9178;
+}
+
+.comma {
+    color: inherit;
+}
+
+.semicolon {
+    color: inherit;
 }

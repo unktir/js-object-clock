@@ -1,7 +1,8 @@
-html, body {
+html,
+body {
     color: #bcbec4;
 
-    font-family: "JetBrains Mono", monospace;
+    font-family: 'JetBrains Mono', monospace;
 }
 
 body {
@@ -13,7 +14,7 @@ body {
 }
 
 .local-variable {
-   color: #a9b7c6;
+    color: #a9b7c6;
 }
 
 .operator {
@@ -28,10 +29,22 @@ body {
     color: #c77dbb;
 }
 
+.colon {
+    color: inherit;
+}
+
 .number {
     color: #2aacb8;
 }
 
 .string {
     color: #6aab73;
+}
+
+.comma {
+    color: inherit;
+}
+
+.semicolon {
+    color: inherit;
 }

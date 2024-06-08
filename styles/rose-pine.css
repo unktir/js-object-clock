@@ -1,5 +1,6 @@
-html, body {
-    color: #908caa;
+html,
+body {
+    color: #e0def4;
 
     font-family: Consolas, 'Courier New', monospace;
 }
@@ -13,7 +14,7 @@ body {
 }
 
 .local-variable {
-    color: #e0def4;
+    color: inherit;
     font-style: italic;
 }
 
@@ -22,11 +23,15 @@ body {
 }
 
 .bracket {
-    color: #eb6f9280;
+    color: #908caa;
 }
 
 .object-key {
-    color: #e0def4;
+    color: inherit;
+}
+
+.colon {
+    color: #908caa;
 }
 
 .number {
@@ -35,4 +40,12 @@ body {
 
 .string {
     color: #f6c177;
+}
+
+.comma {
+    color: #908caa;
+}
+
+.semicolon {
+    color: #908caa;
 }
