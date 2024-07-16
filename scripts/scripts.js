@@ -15,7 +15,7 @@ function Clock() {
     this.year = time.getFullYear();
     this.timezone = `"GMT${timeZoneSign}${timeZoneOffsetHours.toString().padStart(2, '0')}"`;
     this.unix = Math.floor(Date.now() / 1000);
-    this.utc = new Date(this.unix * 1000).toISOString();
+    this.utc = `"${new Date(this.unix * 1000).toISOString()}"`;
 }
 
 function Settings() {
