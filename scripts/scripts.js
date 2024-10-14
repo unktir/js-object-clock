@@ -1,3 +1,12 @@
+/**
+ * @type {"es-CO" | "en-US" | "ja-JP"}
+ */
+const default_lang = 'en-US'
+/**
+ * @type {"long" | "short"}
+ */
+const default_format = 'long'
+
 function Clock() {
     let time = new Date();
 
@@ -10,8 +19,8 @@ function Clock() {
     this.second = time.getSeconds();
     this.period = (this.hour < 12) ? '"AM"' : '"PM"';
     this.day = time.getDate();
-    this.weekday = en_week_days_name[time.getDay()];
-    this.month = en_month_name[time.getMonth()];
+    this.weekday = addDoubleQuotes(time.toLocaleString(default_lang, { weekday: default_format }))
+    this.month = addDoubleQuotes(time.toLocaleString(default_lang, { month: default_format }))
     this.year = time.getFullYear();
     this.timezone = `"GMT${timeZoneSign}${timeZoneOffsetHours.toString().padStart(2, '0')}"`;
     this.unix = Math.floor(Date.now() / 1000);
@@ -115,8 +124,6 @@ function Settings() {
 const changeable_format_elements = ['hour', 'minute', 'second', 'day']
 const possible_declarations = ['let', 'const']
 
-const en_month_name = ['"January"', '"February"', '"March"', '"April"', '"May"', '"June"', '"July"', '"August"', '"September"', '"October"', '"November"', '"December"'];
-const en_week_days_name = ['"Sunday"', '"Monday"', '"Tuesday"', '"Wednesday"', '"Thursday"', '"Friday"', '"Saturday"'];
 
 const themes = {
     main: "./styles/main.css",
@@ -149,6 +156,10 @@ function use12hFormat(flag, object) {
     if (flag) {
         object['hour'] = convertTo12hFormat(object['hour'])
     }
+}
+
+function addDoubleQuotes(txt) {
+    return `"${txt}"`
 }
 
 function addLeadingZero(num) {
