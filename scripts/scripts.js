@@ -1,21 +1,24 @@
-function Clock() {
+function Clock(settings) {
     let time = new Date();
 
     let timeZoneOffsetInMinutes = time.getTimezoneOffset();
     let timeZoneSign = timeZoneOffsetInMinutes > 0 ? '-' : '+';
     let timeZoneOffsetHours = Math.abs(Math.floor(timeZoneOffsetInMinutes / 60));
+    const monthNames = getMonthNames(settings);
+    const weekNames = getWeekDaysNames(settings);
 
     this.hour = time.getHours();
     this.minute = time.getMinutes();
     this.second = time.getSeconds();
     this.period = (this.hour < 12) ? '"AM"' : '"PM"';
     this.day = time.getDate();
-    this.weekday = en_week_days_name[time.getDay()];
-    this.month = en_month_name[time.getMonth()];
+    this.weekday = weekNames[time.getDay()];
+    this.month = monthNames[time.getMonth()];
     this.year = time.getFullYear();
     this.timezone = `"GMT${timeZoneSign}${timeZoneOffsetHours.toString().padStart(2, '0')}"`;
     this.unix = Math.floor(Date.now() / 1000);
     this.utc = `"${new Date(this.unix * 1000).toISOString()}"`;
+    this.day_progress = getDayProgress().toFixed(2) + '%';
 }
 
 function Settings() {
@@ -61,28 +64,35 @@ function Settings() {
                 visibility: true,
                 type: 'number'
             },
-            timezone: {
+            day_progress: {
                 order: 8,
+                visibility: true,
+                type: "number"
+            },
+            timezone: {
+                order: 9,
                 visibility: false,
                 type: 'string'
             },
             unix: {
-                order: 9,
+                order: 10,
                 visibility: false,
                 type: 'number'
             },
             utc: {
-                order: 10,
+                order: 11,
                 visibility: false,
                 type: 'string'
             }
         },
     }
 
+    this.customimage = ""
+
     this.format = {
         use_12h_format: false,
         show_leading_zero: false,
-        use_const_declaration: false
+        const_declaration: 'const',
     }
 
     this.visibility = {
@@ -91,12 +101,21 @@ function Settings() {
         }
     }
 
+    this.language = 'ru'
+
     this.position = {
         customization: {
             enable: false
         },
         x: 'center',
         y: 'center'
+    }
+
+    this.offset ={
+        customization: {
+            enable: false
+        },
+        x: 0
     }
 
     this.theme = {
@@ -113,10 +132,26 @@ function Settings() {
 }
 
 const changeable_format_elements = ['hour', 'minute', 'second', 'day']
-const possible_declarations = ['let', 'const']
+
+const possible_declarations = ['let', 'const', 'var']
+
 
 const en_month_name = ['"January"', '"February"', '"March"', '"April"', '"May"', '"June"', '"July"', '"August"', '"September"', '"October"', '"November"', '"December"'];
 const en_week_days_name = ['"Sunday"', '"Monday"', '"Tuesday"', '"Wednesday"', '"Thursday"', '"Friday"', '"Saturday"'];
+
+const ru_month_name = ['"Январь"', '"Февраль"', '"Март"', '"Арпель"', '"Май"', '"Июнь"', '"Июль"', '"Август"', '"Сернябрь"', '"Октябрь"', '"Ноябрь"', '"Декабырь"'];
+const ru_week_days_name = ['"Понедельник"', '"Вторник"', '"Среда"', '"Четвер"', '"Пятница"', '"Суббота"', '"Воскресенье"'];
+
+
+const month_names = {
+    "en": en_month_name,
+    "ru": ru_month_name
+}
+
+const week_days_name = {
+    "en": en_week_days_name,
+    "ru": ru_week_days_name
+}
 
 const themes = {
     main: "./styles/main.css",
@@ -134,6 +169,28 @@ const themes = {
 }
 
 const default_settings = new Settings()
+
+function setUserImage(user_image_path) {
+    const imagePath = 'file:///' + user_image_path.replace(/\\/g, '/');
+    document.body.style.backgroundImage = `url("${imagePath}")`;
+}
+
+function getDayProgress() {
+    const now = new Date();
+    const startOfDay = new Date(now);
+    startOfDay.setHours(0, 0, 0, 0);
+
+    const progress = ((now - startOfDay) / 86400000) * 100;
+    return progress;
+}
+
+function getWeekDaysNames(settings) {
+    return week_days_name[settings.language]
+}
+
+function getMonthNames(settings) {
+    return month_names[settings.language]
+}
 
 function convertTo12hFormat(hour) {
     hour %= 12
@@ -220,7 +277,7 @@ function createClockElements(object, elements, ordered_list) {
 function createClock(object, settings) {
     const result = []
 
-    const keyword = settings.format.use_const_declaration ? possible_declarations[1] : possible_declarations[0]
+    const keyword = settings.format.const_declaration
     const start = document.createElement('p')
     start.innerHTML = `<span class="keyword">${keyword}</span> <span class="local-variable">clock</span> <span class="operator">=</span> <span class="bracket">{</span>`
     result.push(start)
@@ -247,9 +304,20 @@ function changePosition(settings) {
     const position = settings.position.customization.enable ? settings.position : default_settings.position
     const x = position.x
     const y = position.y
-
     document.body.style.justifyContent = x
     document.body.style.alignItems = y
+}
+
+function changePositionOffset(settings) {
+    const offset = settings.position.customization.enable ? settings.offset : default_settings.offset;
+
+    if (settings.position.x === 'center' || settings.position.x === 'flex-start') {
+        document.body.style.marginLeft = offset.x + 'px';
+        document.body.style.marginRight = "0px";
+    } else {
+        document.body.style.marginRight = offset.x + 'px';
+        document.body.style.marginLeft = "0px";
+    }
 }
 
 function changeFontSize({size}) {
@@ -273,15 +341,16 @@ function changeTheme(settings) {
 }
 
 function updateClock(object, settings) {
-    object = new Clock()
+    object = new Clock(settings)
 
     changeFontSize(settings.font)
 
     changePosition(settings)
+    changePositionOffset(settings)
 
     changeTheme(settings)
 
     updateClockDOM(object, settings)
 }
 
-export {Clock, Settings, updateClock}
+export {Clock, Settings, updateClock, setUserImage}

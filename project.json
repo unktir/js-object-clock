@@ -1,61 +1,17 @@
 {
 	"contentrating" : "Everyone",
-	"description" : "\"js object - clock\" is a web-based wallpaper with a customization available. The JetBrains IDE dark theme was taken as the basis (maybe add some more).\r\n\r\n[b]List of settings:[/b]\r\n[list]\r\n[*]Select the 12 o'clock format,\r\n[*]Show the leading zero (convert a numeric value to a string value),\r\n[*]Change visibility of any element (hour, minute, second, period (PM/AM), day, weekday, month, year, timezone, UNIX, UTC),\r\n[*]Select font size, font family and theme,\r\n[*]Change to [b]const[/b] declaration,\r\n[*]Change clock position.\r\n[/list]\r\n\r\n[b]List of themes:[/b]\r\n[list]\r\n[*]Default (customized JetBrains Dark)\r\n[*]JetBrains Dark,\r\n[*]JetBrains Light,\r\n[*]Dark Modern,\r\n[*]Light Modern,\r\n[*]One Dark Pro,\r\n[*]Dracula Official,\r\n[*]GitHub Theme,\r\n[*]Catppuccin Mocha,\r\n[*]SynthWave '84,\r\n[*][url=steamcommunity.com/sharedfiles/filedetails/?id=2980088441]CodeTime[/url].\r\n[/list]\r\n\r\n[b]List of font family:[/b]\r\n[list]\r\n[*]Consolas,\r\n[*]Courier New,\r\n[*]JetBrains Mono,\r\n[*]Hack NFM,\r\n[*]Iosevka.\r\n[/list]\r\n\r\nI will be glad to see your wishes, criticism or praise)\r\nIf you have any ideas on how to improve this project, then please open a discussion so that I can discuss it with you\r\n\r\nThis project was inspired by Isaias19's project called [url=steamcommunity.com/sharedfiles/filedetails/?id=2980088441]CodeTime[/url]\r\nAlso recommend watching OOOOMGOSH's project called [url=steamcommunity.com/sharedfiles/filedetails/?id=3007669757]Python Dictionary Clock[/url]",
+	"description" : "\"js object - clock\" is a web-based  wallpaper with a customization available. The JetBrains IDE dark theme was taken as the basis (maybe add some more).\n\n[b]List of settings:[/b]\n[list]\n[*]Select the 12 o'clock format,\n[*]Show the leading zero (convert a numeric value to a string value),\n[*]Change visibility of any element (hour, minute, second, period (PM/AM), day, weekday, month, year, day progress timezone, UNIX, UTC),\n[*]Select font size, font family and theme,\n[*]Change to [b]const[/b] declaration,\n[*]Change clock position.\n[/list]\n\n[b]List of themes:[/b]\n[list]\n[*]Default (customized JetBrains Dark)\n[*]JetBrains Dark,\n[*]JetBrains Light,\n[*]Dark Modern,\n[*]Light Modern,\n[*]One Dark Pro,\n[*]Dracula Official,\n[*]GitHub Theme,\n[*]Rosé Pine,\n[*]Catppuccin Mocha,\n[*]SynthWave '84,\n[*][url=steamcommunity.com/sharedfiles/filedetails/?id=2980088441]CodeTime[/url].\n[/list]\n\n[b]List of font family:[/b]\n[list]\n[*]Consolas,\n[*]Courier New,\n[*]JetBrains Mono,\n[*]Hack NFM,\n[*]Iosevka.\n[/list]\n\nI will be glad to see your wishes, criticism or praise)\nIf you have any ideas on how to improve this project, then please open a discussion so that I can discuss it with you\nAlso you can use github of [url=github.com/unktir/js-object-clock]js object - clock[/url] project. It is better to use it for discussions and especially for issues\nThank y'all for 100k subscribers!\n\nThis project was inspired by Isaias19's project called [url=steamcommunity.com/sharedfiles/filedetails/?id=2980088441]CodeTime[/url]\nAlso recommend watching OOOOMGOSH's project called [url=steamcommunity.com/sharedfiles/filedetails/?id=3007669757]Python Dictionary Clock[/url]",
 	"file" : "index.html",
 	"general" : 
 	{
 		"properties" : 
 		{
-			"schemecolor" : 
-			{
-				"order" : 0,
-				"text" : "ui_browse_properties_scheme_color",
-				"type" : "color",
-				"value" : "0 0 0"
-			},
 			"clock_settings" : 
 			{
 				"index" : 0,
 				"order" : 100,
 				"text" : "<h3><b>Clock settings</b></h3>",
 				"type" : "text"
-			},
-			"ui_font_size" : 
-			{
-				"fraction" : false,
-				"index" : 1,
-				"max" : 64,
-				"min" : 16,
-				"order" : 101,
-				"text" : "Font size",
-				"type" : "slider",
-				"value" : 48
-			},
-			"ui_use_12h_format" : 
-			{
-				"condition" : "",
-				"index" : 2,
-				"order" : 102,
-				"text" : "Use 12h format",
-				"type" : "bool",
-				"value" : false
-			},
-			"ui_show_leading_zero" : 
-			{
-				"condition" : "",
-				"index" : 3,
-				"order" : 103,
-				"text" : "Show leading zero",
-				"type" : "bool",
-				"value" : false
-			},
-			"ui_use_const" : 
-			{
-				"index" : 4,
-				"order" : 104,
-				"text" : "Use <b>const</b> declaration",
-				"type" : "bool",
-				"value" : false
 			},
 			"customization_1" : 
 			{
@@ -64,168 +20,19 @@
 				"text" : "<h4><b>Customization</b></h4>",
 				"type" : "text"
 			},
-			"ui_customize_position_enable" : 
+			"customization_2" : 
 			{
-				"index" : 6,
-				"order" : 106,
-				"text" : "<b><u>Position</u></b>",
-				"type" : "bool",
-				"value" : false
+				"index" : 23,
+				"order" : 123,
+				"text" : "<h4><b>Customization</b></h4>",
+				"type" : "text"
 			},
-			"ui_position_x" : 
+			"schemecolor" : 
 			{
-				"condition" : "ui_customize_position_enable.value === true",
-				"index" : 7,
-				"options" : 
-				[
-					{
-						"label" : "Left",
-						"value" : "flex-start"
-					},
-					{
-						"label" : "Center",
-						"value" : "center"
-					},
-					{
-						"label" : "Right",
-						"value" : "flex-end"
-					}
-				],
-				"order" : 107,
-				"text" : "Position X",
-				"type" : "combo",
-				"value" : "center"
-			},
-			"ui_position_y" : 
-			{
-				"condition" : "ui_customize_position_enable.value === true",
-				"index" : 8,
-				"options" : 
-				[
-					{
-						"label" : "Top",
-						"value" : "flex-start"
-					},
-					{
-						"label" : "Center",
-						"value" : "Center"
-					},
-					{
-						"label" : "Bottom",
-						"value" : "flex-end"
-					}
-				],
-				"order" : 108,
-				"text" : "Position Y",
-				"type" : "combo",
-				"value" : "Center"
-			},
-			"ui_customize_visibility_enable" : 
-			{
-				"index" : 9,
-				"order" : 109,
-				"text" : "<b><u>Visibility</u></b>",
-				"type" : "bool",
-				"value" : false
-			},
-			"ui_show_hour" : 
-			{
-				"condition" : "ui_customize_visibility_enable.value === true",
-				"index" : 10,
-				"order" : 110,
-				"text" : "Show hour",
-				"type" : "bool",
-				"value" : true
-			},
-			"ui_show_minute" : 
-			{
-				"condition" : "ui_customize_visibility_enable.value === true",
-				"index" : 11,
-				"order" : 111,
-				"text" : "Show minute",
-				"type" : "bool",
-				"value" : true
-			},
-			"ui_show_second" : 
-			{
-				"condition" : "ui_customize_visibility_enable.value === true",
-				"index" : 12,
-				"order" : 112,
-				"text" : "Show seconds",
-				"type" : "bool",
-				"value" : true
-			},
-			"ui_show_period" : 
-			{
-				"condition" : "ui_customize_visibility_enable.value === true",
-				"index" : 13,
-				"order" : 113,
-				"text" : "Show period (PM/AM)",
-				"type" : "bool",
-				"value" : true
-			},
-			"ui_show_day" : 
-			{
-				"condition" : "ui_customize_visibility_enable.value === true",
-				"index" : 14,
-				"order" : 114,
-				"text" : "Show day",
-				"type" : "bool",
-				"value" : true
-			},
-			"ui_show_weekday" : 
-			{
-				"condition" : "ui_customize_visibility_enable.value === true",
-				"index" : 15,
-				"order" : 115,
-				"text" : "Show weekday",
-				"type" : "bool",
-				"value" : false
-			},
-			"ui_show_month" : 
-			{
-				"condition" : "ui_customize_visibility_enable.value === true",
-				"index" : 16,
-				"order" : 116,
-				"text" : "Show month",
-				"type" : "bool",
-				"value" : true
-			},
-			"ui_show_year" : 
-			{
-				"condition" : "ui_customize_visibility_enable.value === true",
-				"index" : 17,
-				"order" : 117,
-				"text" : "Show year",
-				"type" : "bool",
-				"value" : true
-			},
-			"ui_show_timezone" : 
-			{
-				"condition" : "ui_customize_visibility_enable.value === true",
-				"index" : 18,
-				"order" : 118,
-				"text" : "Show timezone",
-				"type" : "bool",
-				"value" : false
-			},
-			"ui_show_unix" : 
-			{
-				"condition" : "ui_customize_visibility_enable.value === true",
-				"index" : 19,
-				"order" : 119,
-				"text" : "Show UNIX",
-				"type" : "bool",
-				"value" : false
-			},
-			"ui_show_utc" : 
-			{
-				"condition" : "ui_customize_visibility_enable.value === true",
-				"index" : 20,
-				"order" : 120,
-				"text" : "Show UTC",
-				"type" : "bool",
-				"value" : false
+				"order" : 0,
+				"text" : "ui_browse_properties_scheme_color",
+				"type" : "color",
+				"value" : "0 0 0"
 			},
 			"theme_settings" : 
 			{
@@ -234,77 +41,52 @@
 				"text" : "<h3><b>Theme settings</b></h3>",
 				"type" : "text"
 			},
-			"ui_theme" : 
+			"language" : 
 			{
-				"index" : 22,
+				"index" : 1,
 				"options" : 
 				[
 					{
-						"label" : "Default",
-						"value" : "main"
+						"label" : "English",
+						"value" : "en"
 					},
 					{
-						"label" : "JetBrains Dark",
-						"value" : "jb_dark"
-					},
-					{
-						"label" : "Dark Modern",
-						"value" : "dark_modern"
-					},
-					{
-						"label" : "One Dark Pro",
-						"value" : "one_dark_pro"
-					},
-					{
-						"label" : "Dracula Official",
-						"value" : "dracula_official"
-					},
-					{
-						"label" : "GitHub Theme",
-						"value" : "github_theme"
-					},
-					{
-						"label" : "Rose Pine",
-						"value" : "rose_pine"
-					},
-					{
-						"label": "Catppuccin Mocha",
-						"value": "catppuccin_mocha"
-					},
-					{
-						"label" : "SynthWave '84",
-						"value" : "synthwave_84"
-					},
-					{
-						"label" : "CodeTime",
-						"value" : "code_time"
-					},
-					{
-						"label" : "JetBrains Light",
-						"value" : "jb_light"
-					},
-					{
-						"label" : "Light Modern",
-						"value" : "light_modern"
+						"label" : "Russian",
+						"value" : "ru"
 					}
+					
 				],
-				"order" : 122,
-				"text" : "Theme",
+				"order" : 101,
+				"text" : "Language",
 				"type" : "combo",
-				"value" : "main"
+				"value" : "en"
 			},
-			"customization_2" : 
+			"customimage" : 
+            {
+                "text" : "User image",
+                "type" : "file"
+            },
+			"ui_customize_position_enable" : 
 			{
-				"index" : 23,
-				"order" : 123,
-				"text" : "<h4><b>Customization</b></h4>",
-				"type" : "text"
+				"index" : 6,
+				"order" : 106,
+				"text" : "<b><u>Position</u></b>",
+				"type" : "bool",
+				"value" : false
 			},
 			"ui_customize_theme_enable" : 
 			{
 				"index" : 24,
 				"order" : 124,
 				"text" : "<b><u>Enable</u></b>",
+				"type" : "bool",
+				"value" : false
+			},
+			"ui_customize_visibility_enable" : 
+			{
+				"index" : 9,
+				"order" : 111,
+				"text" : "<b><u>Visibility</u></b>",
 				"type" : "bool",
 				"value" : false
 			},
@@ -343,14 +125,295 @@
 				"text" : "Font family",
 				"type" : "combo",
 				"value" : "inherit"
+			},
+			"ui_font_size" : 
+			{
+				"fraction" : false,
+				"index" : 1,
+				"max" : 64,
+				"min" : 16,
+				"order" : 101,
+				"text" : "Font size",
+				"type" : "slider",
+				"value" : 48
+			},
+			"ui_position_x" : 
+			{
+				"condition" : "ui_customize_position_enable.value === true",
+				"index" : 7,
+				"options" : 
+				[
+					{
+						"label" : "Left",
+						"value" : "flex-start"
+					},
+					{
+						"label" : "Center",
+						"value" : "center"
+					},
+					{
+						"label" : "Right",
+						"value" : "flex-end"
+					}
+				],
+				"order" : 107,
+				"text" : "Position X",
+				"type" : "combo",
+				"value" : "center"
+			},
+			"ui_position_offset_x" :
+			{
+				"condition" : "ui_customize_position_enable.value === true",
+				"fraction" : false,
+				"index" : 8,
+				"max" : 1000,
+				"min" : -1000,
+				"order" : 108,
+				"text" : "Offset x",
+				"type" : "slider",
+				"value" : 0
+			},
+			"ui_position_y" : 
+			{
+				"condition" : "ui_customize_position_enable.value === true",
+				"index" : 9,
+				"options" : 
+				[
+					{
+						"label" : "Top",
+						"value" : "flex-start"
+					},
+					{
+						"label" : "Center",
+						"value" : "Center"
+					},
+					{
+						"label" : "Bottom",
+						"value" : "flex-end"
+					}
+				],
+				"order" : 108,
+				"text" : "Position Y",
+				"type" : "combo",
+				"value" : "Center"
+			},
+			"ui_show_day" : 
+			{
+				"condition" : "ui_customize_visibility_enable.value === true",
+				"index" : 14,
+				"order" : 114,
+				"text" : "Show day",
+				"type" : "bool",
+				"value" : true
+			},
+			"ui_show_hour" : 
+			{
+				"condition" : "ui_customize_visibility_enable.value === true",
+				"index" : 10,
+				"order" : 112,
+				"text" : "Show hour",
+				"type" : "bool",
+				"value" : true
+			},
+			"ui_show_leading_zero" : 
+			{
+				"condition" : "",
+				"index" : 3,
+				"order" : 103,
+				"text" : "Show leading zero",
+				"type" : "bool",
+				"value" : false
+			},
+			"ui_show_minute" : 
+			{
+				"condition" : "ui_customize_visibility_enable.value === true",
+				"index" : 11,
+				"order" : 112,
+				"text" : "Show minute",
+				"type" : "bool",
+				"value" : true
+			},
+			"ui_show_month" : 
+			{
+				"condition" : "ui_customize_visibility_enable.value === true",
+				"index" : 16,
+				"order" : 116,
+				"text" : "Show month",
+				"type" : "bool",
+				"value" : true
+			},
+			"ui_show_period" : 
+			{
+				"condition" : "ui_customize_visibility_enable.value === true",
+				"index" : 13,
+				"order" : 113,
+				"text" : "Show period (PM/AM)",
+				"type" : "bool",
+				"value" : true
+			},
+			"ui_show_second" : 
+			{
+				"condition" : "ui_customize_visibility_enable.value === true",
+				"index" : 12,
+				"order" : 112,
+				"text" : "Show seconds",
+				"type" : "bool",
+				"value" : true
+			},
+			"ui_show_timezone" : 
+			{
+				"condition" : "ui_customize_visibility_enable.value === true",
+				"index" : 18,
+				"order" : 118,
+				"text" : "Show timezone",
+				"type" : "bool",
+				"value" : false
+			},
+			"ui_show_unix" : 
+			{
+				"condition" : "ui_customize_visibility_enable.value === true",
+				"index" : 19,
+				"order" : 119,
+				"text" : "Show UNIX",
+				"type" : "bool",
+				"value" : false
+			},
+			"ui_show_utc" : 
+			{
+				"condition" : "ui_customize_visibility_enable.value === true",
+				"index" : 20,
+				"order" : 120,
+				"text" : "Show UTC",
+				"type" : "bool",
+				"value" : false
+			},
+			"ui_show_weekday" : 
+			{
+				"condition" : "ui_customize_visibility_enable.value === true",
+				"index" : 15,
+				"order" : 115,
+				"text" : "Show weekday",
+				"type" : "bool",
+				"value" : false
+			},
+			"ui_show_year" : 
+			{
+				"condition" : "ui_customize_visibility_enable.value === true",
+				"index" : 17,
+				"order" : 117,
+				"text" : "Show year",
+				"type" : "bool",
+				"value" : true
+			},
+			"ui_show_day_progress" : 
+			{
+				"condition" : "ui_customize_visibility_enable.value === true",
+				"index" : 17,
+				"order" : 117,
+				"text" : "Show day progress",
+				"type" : "bool",
+				"value" : true
+			},
+			"ui_theme" : 
+			{
+				"index" : 22,
+				"options" : 
+				[
+					{
+						"label" : "Default",
+						"value" : "main"
+					},
+					{
+						"label" : "JetBrains Dark",
+						"value" : "jb_dark"
+					},
+					{
+						"label" : "Dark Modern",
+						"value" : "dark_modern"
+					},
+					{
+						"label" : "One Dark Pro",
+						"value" : "one_dark_pro"
+					},
+					{
+						"label" : "Dracula Official",
+						"value" : "dracula_official"
+					},
+					{
+						"label" : "GitHub Theme",
+						"value" : "github_theme"
+					},
+					{
+						"label" : "Rose Pine",
+						"value" : "rose_pine"
+					},
+					{
+						"label" : "Catppuccin Mocha",
+						"value" : "catppuccin_mocha"
+					},
+					{
+						"label" : "SynthWave '84",
+						"value" : "synthwave_84"
+					},
+					{
+						"label" : "CodeTime",
+						"value" : "code_time"
+					},
+					{
+						"label" : "JetBrains Light",
+						"value" : "jb_light"
+					},
+					{
+						"label" : "Light Modern",
+						"value" : "light_modern"
+					}
+				],
+				"order" : 122,
+				"text" : "Theme",
+				"type" : "combo",
+				"value" : "main"
+			},
+			"ui_use_12h_format" : 
+			{
+				"condition" : "",
+				"index" : 2,
+				"order" : 102,
+				"text" : "Use 12h format",
+				"type" : "bool",
+				"value" : false
+			},
+			"ui_const_declaration" : 
+			{
+				"index" : 4,
+				"order" : 104,
+				"text" : "Use <b>const</b> declaration",
+				"options" : 
+				[
+					{
+						"label" : "Const",
+						"value" : "const"
+					},
+					{
+						"label" : "Let",
+						"value" : "let"
+					},
+					{
+						"label" : "Var",
+						"value" : "var"
+					}
+				],
+				"type" : "combo",
+				"value" : "var"
 			}
 		}
 	},
 	"preview" : "preview.jpg",
+	"ratingsex" : "none",
+	"ratingviolence" : "none",
 	"tags" : [ "Technology" ],
 	"title" : "js object - clock",
 	"type" : "Web",
-	"version" : 6,
+	"version" : 7,
 	"visibility" : "public",
 	"workshopid" : "2986163106",
 	"workshopurl" : "steam://url/CommunityFilePage/2986163106"

@@ -1,7 +1,8 @@
-import {Clock, Settings, updateClock} from "./scripts.js";
+import {Clock, Settings, updateClock, setUserImage} from "./scripts.js";
 
-let clock = new Clock();
+
 let settings = new Settings();
+let clock = new Clock(settings);
 
 updateClock(clock, settings);
 
@@ -10,17 +11,21 @@ window.wallpaperPropertyListener = {
         if (properties.ui_font_size) {
             settings.font.size = properties.ui_font_size.value;
         }
-
+        if (properties.language) {
+            settings.language = properties.language.value;
+        }
+        if (properties.customimage) {
+            setUserImage(properties.customimage.value);
+        }
         if (properties.ui_use_12h_format) {
             settings.format.use_12h_format = properties.ui_use_12h_format.value;
         }
         if (properties.ui_show_leading_zero) {
             settings.format.show_leading_zero = properties.ui_show_leading_zero.value;
         }
-        if (properties.ui_use_const) {
-            settings.format.use_const_declaration = properties.ui_use_const.value;
+        if (properties.ui_const_declaration) {
+            settings.format.const_declaration = properties.ui_const_declaration.value;
         }
-
         if (properties.ui_customize_position_enable) {
             settings.position.customization.enable = properties.ui_customize_position_enable.value;
         }
@@ -30,7 +35,9 @@ window.wallpaperPropertyListener = {
         if (properties.ui_position_y) {
             settings.position.y = properties.ui_position_y.value;
         }
-
+        if (properties.ui_position_offset_x){
+            settings.offset.x = properties.ui_position_offset_x.value;
+        }
         if (properties.ui_customize_visibility_enable) {
             settings.visibility.customization.enable = properties.ui_customize_visibility_enable.value;
         }
@@ -58,6 +65,9 @@ window.wallpaperPropertyListener = {
         if (properties.ui_show_year) {
             settings.clock.elements.year.visibility = properties.ui_show_year.value;
         }
+        if (properties.ui_show_day_progress) {
+            settings.clock.elements.day_progress.visibility = properties.ui_show_day_progress.value;
+        }
         if (properties.ui_show_timezone) {
             settings.clock.elements.timezone.visibility = properties.ui_show_timezone.value;
         }
@@ -67,11 +77,9 @@ window.wallpaperPropertyListener = {
         if (properties.ui_show_utc) {
             settings.clock.elements.utc.visibility = properties.ui_show_utc.value;
         }
-
         if (properties.ui_theme) {
             settings.theme.name = properties.ui_theme.value;
         }
-
         if (properties.ui_customize_theme_enable) {
             settings.theme.customization.enable = properties.ui_customize_theme_enable.value;
         }
